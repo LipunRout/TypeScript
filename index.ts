@@ -75,22 +75,103 @@
 // };
 
 
-class Person {
-  name: string;
-  age: number;
+// class Person {
+//   name: string;
+//   age: number;
 
-  constructor(name: string, age: number) {
-    this.name = name;
-    this.age = age;
+//   constructor(name: string, age: number) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   greet(): void {
+//     console.log(`Hello, my name is ${this.name}`);
+//   }
+//   Age(): void {
+//     console.log(`I am ${this.age} years old`);
+//   } 
+// }
+// let person1 = new Person("Lipun", 21);
+// person1.greet();
+// person1.Age();
+
+
+
+
+
+// class bottleMaker{
+//   constructor(public name : String , public Price:number ,public Colour :String,public Mterial : String){
+
+//   }
+// }
+// let bottle1 = new bottleMaker("Lipun", 200, "Red", "Plastic");
+// console.log(bottle1);
+
+
+//This Key Word
+
+
+// class bottleMaker{
+//   constructor(public name : String , public Price:number ,public Colour :String,public Mterial : String){
+
+//   }
+  
+// }
+// let bottle1 = new bottleMaker("Lipun", 200, "Red", "Plastic");
+// console.log(bottle1);
+
+
+//Access Modifiers
+
+// class Person {
+//   private age: number;
+
+//   constructor(age: number) {
+//     this.age = age;
+//   }
+
+//   showAge() {
+//     console.log(this.age); // ✅ allowed
+//   }
+// }
+
+// const p1 = new Person(22);
+// p1.showAge(); // ✅ allowed
+
+
+// class Animal {
+//   protected sound: string = "Some sound";
+// }
+
+// class Dog extends Animal {
+//   showSound() {
+//     console.log(this.sound); // ✅ allowed
+//   }
+// }
+
+// const d = new Dog();
+// d.showSound(); // ✅ allowed
+// // console.log(d.sound); ❌ Error
+
+
+
+//Getter & Setter
+class User{
+  constructor(public _name:string){
+
+  }
+  get name(){
+    return this._name;
   }
 
-  greet(): void {
-    console.log(`Hello, my name is ${this.name}`);
+  set name(value : string){
+  this._name=value;
   }
-  Age(): void {
-    console.log(`I am ${this.age} years old`);
-  } 
+
 }
-let person1 = new Person("Lipun", 21);
-person1.greet();
-person1.Age();
+
+let a= new User("Lipun");
+
+console.log(a);
+a.name="John";
+console.log(a);
